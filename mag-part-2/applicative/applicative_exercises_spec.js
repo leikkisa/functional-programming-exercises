@@ -3,7 +3,7 @@ var E = require('./applicative_exercises');
 var _ = require('ramda');
 var assert = require("chai").assert
 
-describe("Applicative Exercises", function(){
+describe.skip("Applicative Exercises", function(){
 
   it('Exercise 1', function(){
     assert.deepEqual(Maybe.of(5), E.ex1(2, 3));

@@ -1,11 +1,18 @@
-require('../support');
-var E = require('./functor_exercises');
-var assert = require("chai").assert;
+var E = require('./solution')
+var assert = require("chai").assert
 
-describe("Dollas and sense", function(){
+describe("formatMoney", () => {
 
-  it('Currency formatting', function(){
-    assert.deepEqual(formatMoney(39.99), '$39.99');
-  });
+  it('Formats numbers into dollars and cents', () => {
+    assert.deepEqual(E.formatMoney(39.99), '$39.99')
+  })
 
-});
+  it('Appends .00 to whole numbers', () => {
+    assert.deepEqual(E.formatMoney(350), '$350.00')
+  })
+
+  it('Corrects cents to the second decimal place', () => {
+    assert.deepEqual(E.formatMoney(33.33333333), '$33.33')
+  })
+
+})
