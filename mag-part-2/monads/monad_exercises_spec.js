@@ -3,7 +3,7 @@ var E = require('./monad_exercises');
 var assert = require("chai").assert
 var _ = require('ramda');
 
-describe("Monad Exercises", function(){
+describe.skip("Monad Exercises", function(){
 
   it('Exercise 1', function(){
     assert.deepEqual(E.ex1(E.user), Maybe.of('Walnut St'));
